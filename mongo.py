@@ -12,8 +12,8 @@ def mongo_get(hosts):
 
             book = mydb[col]
             print '---------------------------------------------------------------------'
-            print 'DB:'+db+'----'+'COL:'+col
+            print 'DB:'+db+'----'+'Collections:'+col
             cont = str(book.find_one())
             print cont.decode('unicode_escape')
-            print 'num:'+str(book.find().count())
-mongo_get('121.15.7.122')
+            print 'Number:'+str(book.find().count())
+mongo_get(sys.argv[1])
